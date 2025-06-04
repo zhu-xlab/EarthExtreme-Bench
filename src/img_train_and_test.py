@@ -127,7 +127,7 @@ class IMGTrain:
                         )
                         y_val = val_data["y"].to(device)
 
-                        coord_val = val_data.get("coords")
+                        coord_val = val_data.get("spatial_coords")
 
                         if coord_val is not None  and model.model_name == "ibm-nasa-geospatial/prithvi-2_upernet":
                             logits_val = model(
@@ -352,7 +352,7 @@ class FireTrain(IMGTrain):
                     torch.cat([x, mask.to(device)], dim=1) if mask is not None else x
                 )
                 y_test = test_data["y"].to(device)  # b1hw
-                coord_test = test_data.get("coords")
+                coord_test = test_data.get("spatial_coords")
                 model.eval()
 
                 if coord_test is not None:
@@ -517,7 +517,7 @@ class FloodTrain(IMGTrain):
                 )
                 y_test = test_data["y"].to(device)
                 model.eval()
-                coord_test = test_data.get("coords")
+                coord_test = test_data.get("spatial_coords")
 
                 if coord_test is not None and model.model_name == "ibm-nasa-geospatial/prithvi-2_upernet":
                     logits_test = model(
