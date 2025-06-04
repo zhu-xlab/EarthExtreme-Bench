@@ -194,7 +194,7 @@ class ExtremeTemperatureTrain(IMGTrain):
                     torch.cat([x, mask.to(device)], dim=1) if mask is not None else x
                 )
                 y_test = test_data["y"].to(device)
-                coord_test = test_data.get("coords")
+                coord_test = test_data.get("spatial_coords")
 
                 target_time = f"{test_data['disno'][0]}-{test_data['meta_info']['target_time'][0]}"
 
