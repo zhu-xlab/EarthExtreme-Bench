@@ -75,8 +75,8 @@ class EETask:
             "coldwave": ExtremeTemperatureTrain,
             "fire": FireTrain,
             "flood": FloodTrain,
-            # "storm": StormTrain,
-            # "expcp": ExpcpTrain,
+            "storm": StormTrain,
+            "expcp": ExpcpTrain,
             # "tropicalCyclone": TropicalCycloneTrain,
         }
         trainer = trainers[self.disaster](disaster=self.disaster)

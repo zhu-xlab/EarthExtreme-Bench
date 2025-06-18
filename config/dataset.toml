@@ -32,7 +32,7 @@ stds=[0.02269135568823774,
 [fire.model]
 input_dim = 6
 output_dim = 2
-name = "ibm-nasa-geospatial/prithvi-2_upernet" #stanford/satmae"#'ibm-nasa-geospatial/prithvi'#'openmmlab/upernet-convnext-tiny'
+#name = "ibm-nasa-geospatial/prithvi-2_upernet" #stanford/satmae"#'ibm-nasa-geospatial/prithvi'#'openmmlab/upernet-convnext-tiny'
 [fire.train]
 lr = 5e-5
 weight_decay = 5e-6
@@ -125,7 +125,7 @@ upper_stds = [[ 517.8634, 560.0722, 729.3351, 1083.372, 2051.2834],
 [tropicalCyclone.model]
 input_dim = 4
 output_dim = 1
-name = "microsoft/aurora"
+#name = "microsoft/aurora"
 patch_size = 4
 [tropicalCyclone.train]
 lr = 5e-6
@@ -165,7 +165,7 @@ mask_stds = [0.4733320292105142,
 [coldwave.model]
 input_dim = 4
 output_dim = 1
-name = "microsoft/aurora_t2m"
+#name = "microsoft/aurora_t2m"
 [coldwave.train]
 lr = 5e-7
 weight_decay = 5e-6
@@ -201,7 +201,7 @@ mask_stds = [0.4733320292105142,
 [heatwave.model]
 input_dim = 4
 output_dim = 1
-name = "ibm-nasa-geospatial/prithvi" #"microsoft/aurora_t2m" #  #"ibm-nasa-geospatial/prithvi"
+#name = "ibm-nasa-geospatial/prithvi" #"microsoft/aurora_t2m" #  #"ibm-nasa-geospatial/prithvi"
 [heatwave.train]
 lr = 5e-3
 weight_decay = 5e-6
@@ -238,7 +238,7 @@ test_date = ["2019-01-01", "2019-12-31"] # 2019-01-01 to 2019-12-31
 [storm.evaluation]
 thresholds = [0.5, 2, 5, 10, 30]
 [storm.model]
-name = "microsoft/aurora_pcp"#"ibm-nasa-geospatial/prithvi"
+#name = "microsoft/aurora_pcp"#"ibm-nasa-geospatial/prithvi"
 input_dim = 1
 output_dim = 1
 [storm.train]
@@ -275,7 +275,7 @@ train_date = ["2021-01-01", "2022-06-30"] # 2020-01-01 to 2022-06-30
 val_date = ["2022-07-01", "2022-12-31"] # 2022-07-01 to 2022-12-31
 test_date = ["2023-01-01", "2023-12-31"] # 2023-01-01 to 2023-12-31
 [expcp.model]
-name = "ibm-nasa-geospatial/prithvi" #"microsoft/aurora_pcp"
+#name = "ibm-nasa-geospatial/prithvi" #"microsoft/aurora_pcp"
 input_dim = 1
 output_dim = 1
 [expcp.evaluation]

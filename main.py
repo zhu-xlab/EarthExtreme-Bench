@@ -44,8 +44,7 @@ if __name__ == "__main__":
         stage=args.stage,
         model_path=f"/home/EarthExtreme-Bench/results/{args.mode}/{args.model_name}/{args.disaster}/best_model_29_2025-04-02-12-50",##
     )
-    # unet best_model_49_2024-11-15-09-11
-    # upernet-convnext-tiny best_model_49_2024-11-13-15-46
+
     #
     # dataloader = ee_task.get_loader()
     # train_loader = dataloader.test_dataloader()

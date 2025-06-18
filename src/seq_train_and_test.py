@@ -75,7 +75,7 @@ class SEQTrain:
                 y_train = train_data["y"].to(device)
                 # x(b, l1, w, h)
 
-                if settings[self.disaster]["model"]["name"] == "ibm-nasa-geospatial/prithvi":
+                if model.model_name == "ibm-nasa-geospatial/prithvi":
                     x_train = x_train.permute(1,2,0,3,4)  #( b, c, l1, w, h)
                 else:
                     x_train = torch.transpose(x_train, 0, 1).squeeze(2)  # (b,l1, h, w)
@@ -141,7 +141,7 @@ class SEQTrain:
                         with torch.no_grad():
                             x_val = val_data["x"].to(device)
                             y_val = val_data["y"].to(device)
-                            if settings[self.disaster]["model"]["name"] == "ibm-nasa-geospatial/prithvi":
+                            if model.model_name == "ibm-nasa-geospatial/prithvi":
                                 x_val = x_val.permute(1, 2, 0, 3, 4)
                             else:
                                 x_val = torch.transpose(x_val, 0, 1).squeeze(2)
@@ -230,7 +230,7 @@ class StormTrain(SEQTrain):
             for id, test_data in enumerate(test_loader):
                 x_test = test_data["x"].to(device)
                 mask = test_data.get("mask")
-                if settings[self.disaster]["model"]["name"] == "ibm-nasa-geospatial/prithvi":
+                if model.model_name == "ibm-nasa-geospatial/prithvi":
                     x_test = x_test.permute(1, 2, 0, 3, 4)
                 else:
                     x_test = torch.transpose(x_test, 0, 1).squeeze(2)
@@ -372,7 +372,7 @@ class ExpcpTrain(SEQTrain):
             # iterate through test data
             for id, test_data in enumerate(test_loader):
                 x_test = test_data["x"].to(device)
-                if settings[self.disaster]["model"]["name"] == "ibm-nasa-geospatial/prithvi":
+                if model.model_name == "ibm-nasa-geospatial/prithvi":
                     x_test = x_test.permute(1, 2, 0, 3, 4) # l, b, c, h, w -b, c, l, h, w
                 else:
                     x_test = torch.transpose(x_test, 0, 1).squeeze(2)
