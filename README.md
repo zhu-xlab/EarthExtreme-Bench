@@ -3,6 +3,11 @@
 ## Extreme events
 
 ## Dataset
+
+<p align="center">
+  <img src="assets/exebench_overview.gif" width="800">
+</p>
+
 The dataset is available in [Hugging Face](https://huggingface.co/datasets/zhaoshan/ee-bench_v1.0/tree/stable/data)
 
 To download the dataset, use ``earthextremebench/earthextremebench_download.py``
