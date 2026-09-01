@@ -1,5 +1,3 @@
-# from schema import StrEum
-
 from enum import Enum
 
 
