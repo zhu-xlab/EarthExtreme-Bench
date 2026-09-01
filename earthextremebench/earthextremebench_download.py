@@ -5,12 +5,6 @@ from pathlib import Path
 from huggingface_hub import HfApi, hf_hub_download
 from tqdm import tqdm
 
-# os.environ["EE_BENCH_DIR"] = "/home/EarthExtreme-Bench/data/zip-test"
-
-
-# from earthextremebench import EE_BENCH_DIRR
-
-
 def decompress_zip_with_progress(zip_file_path, extract_to_folder=None):
     """Decompress a zip file with a progress bar and remove the symlink."""
     if extract_to_folder is None:
